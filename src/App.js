@@ -1,23 +1,15 @@
-import logo from './logo.svg';
-import './App.css';
-
 function App() {
+  const list = ["Fraises", "Pommes", "Poire", "Fraises"];
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <h1>Shopping</h1>
+      <ul>
+        {list.map((toto, index) => (
+          <li key={index}>{toto}</li>
+        ))}
+      </ul>
+      <h2 style={{ color: "red" }}>{list.join(", ")}</h2>
     </div>
   );
 }
